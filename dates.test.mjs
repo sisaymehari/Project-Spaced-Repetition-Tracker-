@@ -1,6 +1,7 @@
 import assert from "node:assert";
 import test from "node:test";
 import { calculateRevisionDates } from "./dates.mjs";
+import { calculateRevisionDates, formatDate } from "./dates.mjs";
 
 test("calculates the five revision dates", () => {
   assert.deepEqual(calculateRevisionDates("2027-07-19"), [
@@ -22,4 +23,8 @@ test("keeps the day inside a shorter month", () => {
 
 test("handles a leap day", () => {
   assert.equal(calculateRevisionDates("2028-02-29")[4], "2029-02-28");
+});
+
+test("writes a date in a way people can read", () => {
+  assert.equal(formatDate("2027-07-26"), "26 July 2027");
 });

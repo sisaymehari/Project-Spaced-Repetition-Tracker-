@@ -11,14 +11,19 @@
       <h1>Spaced Repetition Tracker</h1>
 
       <label for="user-select">Choose a user</label>
-      <select id="user-select">
+      <select id="user-select" required>
         <option value="">Select a user</option>
       </select>
 
       <form id="topic-form">
         <label for="topic-name">Topic</label>
-        <input id="topic-name" type="text" required />
-
+        <input 
+          id="topic-name"
+          type="text"
+          required
+          pattern=".*\S.*"
+          title="Enter a topic name"
+          />
         <label for="topic-date">Start date</label>
         <input id="topic-date" type="date" required />
 
