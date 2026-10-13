@@ -1,6 +1,5 @@
 import assert from "node:assert";
 import test from "node:test";
-import { calculateRevisionDates } from "./dates.mjs";
 import { calculateRevisionDates, formatDate } from "./dates.mjs";
 
 test("calculates the five revision dates", () => {
